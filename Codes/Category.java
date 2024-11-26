@@ -1,12 +1,19 @@
 abstract public class Category {
-    private String[] Categories = {"electronics","bakery", "clothes", "laptops"};
+    private String[] Categories = {"electronics","bakery", "clothes", "laptops","others"};
     private String type;
+    Category(){
+        type="others";
 
-    Category(String type){
-        type = type.toLowerCase();
+    }
+    public String getType() {
+        return type;
+    }
+
+    Category(String t){
+        t = t.toLowerCase();
         for(int i = 0; i < Categories.length; i++){
             if(type.equals(Categories[i])){
-                this.type = type;
+                this.type = t;
             }
         }
     }
