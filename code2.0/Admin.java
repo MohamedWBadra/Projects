@@ -31,6 +31,7 @@ public class Admin extends Person implements Viewable{
         for(int i = 0 ; i < roles.length; i++) {
             if (role.equals(roles[i])) {
                 this.role = role;
+                break;
             }
         }
     }
