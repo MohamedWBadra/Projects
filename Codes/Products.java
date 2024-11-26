@@ -1,6 +1,6 @@
 public class Products extends Category {
-    String name;
-    float price;
+    private String name;
+    private float price;
     public void setName(String name) {
         this.name = name;
     }
