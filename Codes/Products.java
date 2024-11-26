@@ -13,8 +13,16 @@ public class Products extends Category {
     public float getPrice() {
         return price;
     }
-    Products(String n,float p){}
-    Products(String n,float p,String category){}
+    Products(String n,float p){
+        this.name=n;
+        this.price=p;
+        super();
+    }
+    Products(String n,float p,String category){
+        this.name=n;
+        this.price=p;
+        super(category);
+    }
 
 
 
