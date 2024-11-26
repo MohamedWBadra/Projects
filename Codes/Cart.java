@@ -1,12 +1,28 @@
 import java.util.ArrayList;
 public class Cart{
-   ArrayList<Products> myCart = new ArrayList<Products>();
+   ArrayList<Products> myCart ;
    float totalprice;
-   Cart(){}
+   Cart(){
+    myCart = new ArrayList<Products>();
+    totalprice=0;
+   }
    public float getTotalprice() {
        return totalprice;
    }
-   public void calctotalprice(){}
-   public void addproduct(/*hanshof ba3den */){}
-   public void removeproducts(/*hanshof ba3den */){}
+   public void addproduct(Products p)
+   {
+    totalprice+=p.getPrice();
+    myCart.add(p);
+    
+   }
+   public void removeproducts(Products p){
+    if (myCart.contains(p)) {
+        myCart.remove(p);
+    }
+    else{
+        System.err.println("PRODUCT IS NOT FOUND");
+
+    }
+
+   }
 }
