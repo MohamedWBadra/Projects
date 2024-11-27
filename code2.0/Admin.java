@@ -31,7 +31,6 @@ public class Admin extends Person implements Viewable{
         for(int i = 0 ; i < roles.length; i++) {
             if (role.equals(roles[i])) {
                 this.role = role;
-                break;
             }
         }
     }
@@ -61,7 +60,11 @@ public class Admin extends Person implements Viewable{
         }
     };
 
-    public void viewOrders(){};
+    public void viewOrders(){
+        for(int i = 0 ; i < Database.Orders.size(); i++){
+            System.out.println(Database.Orders.get(i).getPaymentMethod());
+        }
+    };
 
     public void viewCustomers(){
         for(int i = 0; i < Database.Customers.size(); i++){
