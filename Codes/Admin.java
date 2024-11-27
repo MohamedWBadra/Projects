@@ -9,6 +9,7 @@ public class Admin extends Person implements Viewable{
         for(int i = 0 ; i < roles.length; i++){
             if(role.equals(roles[i])){
                 this.role = role;
+                break;
             }
         }
     }
@@ -34,18 +35,40 @@ public class Admin extends Person implements Viewable{
         }
     }
 
-    public void viewAllProducts(){};
+    public void viewAllProducts(){
+        for(int i = 0; i < Database.suppliers.size(); i++){
+            System.out.println(Database.suppliers.get(i).getName() + ":");
+            Database.suppliers.get(i).viewAllProducts();
+        }
+    };
 
     @Override
     public void viewByCategory(String c) {
-
+        for(int i = 0; i < Database.suppliers.size(); i++){
+            System.out.println(Database.suppliers.get(i).getName() + ":");
+            Database.suppliers.get(i).viewByCategory(c);
+        }
     }
 
-    public void addSupplier(){};
+    public void addSupplier(Supplier e){
+        Database.suppliers.add(e);
+    };
 
-    public void viewSuppliers(){};
+    public void viewSuppliers(){
+        for(int i = 0 ;i < Database.suppliers.size(); i++){
+            System.out.println(Database.suppliers.get(i).getName());
+        }
+    };
 
-    public void viewOrders(){};
+    public void viewOrders(){
+        for(int i = 0 ; i < Database.Orders.size(); i++){
+            System.out.println(Database.Orders.get(i).getPaymentMethod());
+        }
+    };
 
-    public void viewCustomers(){};
+    public void viewCustomers(){
+        for(int i = 0; i < Database.Customers.size(); i++){
+            System.out.println(Database.Customers.get(i).getUsername());
+        }
+    };
 }
