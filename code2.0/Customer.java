@@ -40,7 +40,7 @@ public class Customer extends Person implements Viewable{
 
     public void PlaceOrder(){
         if(this.order.getPaymentMethod() == null){
-            System.err.println("Please set your payment method!");
+            System.err.println("Please set your payment method!");  //Momken hena y5lyh b2a input el payment method ely 3ayzha wa nb3tha le order.setPaymentMethod b3d keda y3ml call le place order tany msln
         }else if(this.order.getPaymentMethod().equals("balance")){
             if(balance >= order.Payment()){
                 System.out.println("Payment done successfully from your balance");
