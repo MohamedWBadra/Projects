@@ -1,18 +1,12 @@
 public class Order {
     Cart orderCart;
 
-    String[] payment={"balance"/* ,"Card"*/,"cash"};
+    private String[] payment={"balance"/* ,"Card"*/,"cash"};
 
-    String PaymentMethod;
+    private String PaymentMethod;
 
-    Order(String PaymentMethod){
-        PaymentMethod = PaymentMethod.toLowerCase();
-        for(int i = 0; i < payment.length; i++){
-            if(payment[i].equals(PaymentMethod)){
-                this.PaymentMethod = PaymentMethod;
-                break;
-            }
-        }
+    Order(){
+
         orderCart = new Cart();
     }
 
@@ -21,6 +15,20 @@ public class Order {
     public double Payment(){
         orderCart.CalcTotalPrice();
         return orderCart.getTotalPrice();
+    }
+
+    public String getPaymentMethod() {
+        return PaymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        PaymentMethod = PaymentMethod.toLowerCase();
+        for(int i = 0; i < payment.length; i++){
+            if(payment[i].equals(PaymentMethod)){
+                this.PaymentMethod = PaymentMethod;
+                break;
+            }
+        }
     }
 
     /*
