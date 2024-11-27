@@ -10,6 +10,9 @@ abstract public class Person {
         this.password = password;
         date_of_birth = new Date();
     }
+    public String getUsername() {
+        return username;
+    }
 
 
 }
