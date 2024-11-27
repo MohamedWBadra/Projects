@@ -9,7 +9,7 @@ public class Customer extends Person implements Viewable{
         MALE, FEMALE;
     }
     private final Gender gender;
-    private Order order;
+    private Order order = new Order();
 
     Customer(String username, String password, double balance, String address, Gender gender){
         super(username,password);
@@ -38,9 +38,10 @@ public class Customer extends Person implements Viewable{
         return gender;
     }
 
-    public void PlaceOrder(String PM){
-        order = new Order(PM);
-        if(PM.equals("balance")){
+    public void PlaceOrder(){
+        if(this.order.getPaymentMethod() == null){
+            System.err.println("Please set your payment method!");
+        }else if(this.order.getPaymentMethod().equals("balance")){
             if(balance >= order.Payment()){
                 System.out.println("Payment done successfully from your balance");
                 this.balance-=order.Payment();
@@ -48,15 +49,19 @@ public class Customer extends Person implements Viewable{
                 System.out.println("Not enough balance");
                 //Momken  n5lyh ye5tar lw ye3ml setBalance aw la2
             }
-        }else if(PM.equals("cash")){
+        }else if(this.order.getPaymentMethod().equals("cash")){
             double cash = in.nextDouble();
             if(cash >= order.Payment()){
                 System.out.println("Payment done successfully");
             }else{
                 System.out.println("Insufficient amount please try again!");
             }
+
         }
-        in.nextLine(); //el mafrod dyh btfdy el input in 3a4an lw geh tany y3ml input mtb2a4 in gowaha 7aga
+        in.nextLine();//el mafrod dyh btfdy el input in 3a4an lw geh tany y3ml input mtb2a4 in gowaha 7aga
+        if(this.order.getPaymentMethod() != null) {
+            Database.Orders.add(this.order);
+        }
     }
 
     public void addToCart(){
