@@ -16,6 +16,9 @@ public class Supplier implements Viewable {
             }
         
     }
+    public String getName(){
+        return this.name;
+    }
     public void viewByCategory(String cat){
        for(int i=0;i<myProducts.size();i++)
        {
