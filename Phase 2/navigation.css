@@ -1,0 +1,28 @@
+/* Navigation bar container */
+.navigation-bar {
+    -fx-background-color: linear-gradient(to right, #602cb4, #6740a5);
+    -fx-alignment: center;
+}
+
+/* Buttons inside the navigation bar */
+.navigation-bar .button {
+    -fx-background-color: #602cb4;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-width: 1.5px;
+}
+
+/* Hover effect for buttons */
+.navigation-bar .button:hover {
+    -fx-background-color: #864fdf;
+    -fx-text-fill: #1f0150;
+    -fx-cursor: hand;
+}
+
+/* Active button (optional styling for a selected button) */
+.navigation-bar .button:focused {
+    -fx-background-color:#250754;
+    -fx-border-color: rgb(6, 8, 65);
+    -fx-text-fill: white;
+}

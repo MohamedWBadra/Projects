@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="800.0" style="-fx-background-color: #7db3dc;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.viewSupplierProductsController">
+   <children>
+      <!-- Header Section -->
+       <AnchorPane fx:id="headerpane" prefHeight="74.0" prefWidth="800.0" styleClass="header" stylesheets="@add%20supplier.css">
+         <children>
+            <ImageView fx:id="logo" fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screenshot%202024-12-12%20113238.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="Title" layoutX="320.0" layoutY="20.0" prefHeight="38.0" prefWidth="160.0" styleClass="header-title" text="Awaad electronics" />
+            <TextField fx:id="searchpanel" layoutX="513.0" layoutY="58.0" promptText="Search" />
+            <Button fx:id="searchbutton" layoutX="678.0" layoutY="57.0" mnemonicParsing="false" onAction="#searching" prefHeight="26.0" prefWidth="29.0" text="🔍" />
+            <CheckBox fx:id="category" layoutX="428.0" layoutY="62.0" mnemonicParsing="false" text="Category" textFill="WHITE" />
+            <Button fx:id="addSupplier" layoutX="720.0" layoutY="45.0" mnemonicParsing="false" onAction="#goToAddProducts" prefHeight="38.0" prefWidth="58.0" text="+📦">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <!-- Main Content Area -->
+      <AnchorPane fx:id="viewpane" layoutY="104.0" prefHeight="451.0" prefWidth="800.0" style="-fx-background-color: #7db3dc;">
+         <children>
+            <VBox layoutX="10.0" layoutY="10.0" prefWidth="780.0" spacing="15.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="555.0" prefHeight="19.0" prefWidth="800.0" style="-fx-background-color: #7db3dc;">
+         <children>
+            <Button fx:id="backButton" layoutX="21.0" layoutY="-2.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="30.0" prefWidth="38.0" style="-fx-font-size: 15px; -fx-background-color: #e0e0e0;" text="← ">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

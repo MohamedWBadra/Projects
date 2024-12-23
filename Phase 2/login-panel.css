@@ -1,0 +1,53 @@
+/* Styling for the Login Pane */
+.login-pane {
+    -fx-background-color: #7db3dc; /* Dark background color for the login pane */
+    -fx-background-radius: 8px; /* Rounded corners for the login pane */
+}
+
+/* Styling for the Label */
+.login-pane .label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff; /* White text */
+    -fx-font-weight: bold;
+    
+}
+
+/* Styling for the TextField (Username) */
+.login-pane .text-field {
+    -fx-font-size: 16px;
+    -fx-background-color: #ffffff; /* White background for the text field */
+    -fx-text-fill: #2f3c46; /* Dark text color */
+    -fx-border-radius: 4px; /* Rounded corners for the text field */
+    -fx-border-color: #ffffff; /* White border */
+    -fx-border-width: 2px; /* Border width */
+   
+}
+
+/* Styling for the PasswordField */
+.login-pane .password-field {
+    -fx-font-size: 16px;
+    -fx-background-color: #ffffff; /* White background for the password field */
+    -fx-text-fill: #2f3c46; /* Dark text color */
+    -fx-border-radius: 4px; /* Rounded corners for the password field */
+    -fx-border-color: #ffffff; /* White border */
+    -fx-border-width: 2px; /* Border width */
+   
+}
+
+/* Styling for the Button (Create Account) */
+.login-pane .create-account-button {
+    -fx-font-size: 16px;
+    -fx-background-color: #ffbc00; /* Gold color for the button */
+    -fx-text-fill: #ffffff; /* White text */
+    -fx-border-radius: 4px; /* Rounded corners */
+    -fx-padding: 10px 20px; /* Padding inside the button */
+    -fx-cursor: hand; /* Hand cursor for clickable button */
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0, 2, 2); /* Subtle shadow for button */
+}
+
+/* Hover effect for the button */
+.login-pane .create-account-button:hover {
+    -fx-background-color: #ff9c00; /* Darker gold when hovering */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 6, 0, 3, 3); /* Darker shadow on hover */
+}

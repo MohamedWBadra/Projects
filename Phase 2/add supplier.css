@@ -1,0 +1,17 @@
+/* Styling for the Header */
+.header {
+    -fx-background-color: rgb(55, 70, 83); /* Dark base color for the header */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 15, 0, 0, 0); /* Subtle light glow */
+    -fx-background-image: linear-gradient(to bottom, rgba(55, 70, 83, 1) 0%, rgba(255, 255, 255, 0.1) 60%, rgba(55, 70, 83, 1) 100%),
+                           radial-gradient(center 50% 50%, circle, rgba(255, 255, 255, 0.1) 0%, rgba(55, 70, 83, 1) 100%);
+    -fx-background-blend-mode: lighten; /* Blend the gradients for a smooth transition */
+}
+
+.header-title {
+    -fx-font-size: 15px; /* Adjust font size as needed */
+    -fx-font-family: "Arial", sans-serif; /* Use a clean, modern font */
+    -fx-text-fill: linear-gradient(to right, rgb(255, 200, 87), rgb(255, 170, 0)); /* Gold gradient */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0, 2, 2); /* Subtle shadow for depth */
+    -fx-font-weight: bold; /* Make the text bold */
+    -fx-padding: 10px; /* Add padding around the title */
+}
